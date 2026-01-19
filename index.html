@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fitness & Habit Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-fire"></i> FitTrack
+    </a>
+
+    <ul class="navbar-nav ms-auto align-items-center">
+      <li class="nav-item">
+        <a class="nav-link" href="habits.html">Habits</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="workouts.html">Workouts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="progress.html">Progress</a>
+      </li>
+
+      <li class="nav-item ms-3">
+        <button class="btn btn-light btn-sm" onclick="logout()">
+          Logout
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <h2>Dashboard</h2>
+
+  <div class="row mt-3">
+
+   
+     <div class="col-md-4">
+        <div class="card p-3 dashboard-card h-100">
+        <h5>Habits</h5>
+        <p>Track daily habits</p>
+        <img src="assests/habits.png" alt="habits" class="img-fluid rounded mb-3">
+        <a href="habits.html" class="btn btn-success">Open</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Workouts</h5>
+        <p>Log workouts</p>
+        <img src="assests/workout.png" alt="progress" class="img-fluid rounded mb-3">
+        <a href="workouts.html" class="btn btn-success">Open</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card p-3">
+        <h5>Progress</h5>
+        <p>View progress</p>
+        <img src="assests/progress.png" alt="workout" class="img-fluid rounded mb-3">
+        <a href="progress.html" class="btn btn-success">Open</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    if(localStorage.getItem("isLoggedIn") !== "true"){
+        window.location.href = "login.html";
+    }
+</script>
+
+<script src="js/auth.js"></script>
+</body>
+</html>
